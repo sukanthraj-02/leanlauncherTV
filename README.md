@@ -20,12 +20,18 @@ Gradle wrapper.
 
 ```sh
 ./gradlew :app:assembleDebug      # installable, debug-signed
-./gradlew :app:assembleRelease    # minified + resource-shrunk, unsigned
+./gradlew :app:assembleRelease    # minified + resource-shrunk; signed when configured
 ./gradlew :app:testDebugUnitTest  # unit tests
 ./gradlew :app:lintDebug          # static checks
 ```
 
 `local.properties` must point at your SDK (`sdk.dir=...`).
+
+A signed release APK is produced when `keystore.properties` exists in the project root.
+Copy `keystore.properties.example`, point `storeFile` at your keystore, then
+`./gradlew :app:assembleRelease` writes a signed
+`app/build/outputs/apk/release/app-release.apk`. Without that file, Gradle produces an
+unsigned `app-release-unsigned.apk`, which Android will not install.
 
 ## Install on the TV
 
