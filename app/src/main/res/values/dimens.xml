@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin">48dp</dimen>
+    <dimen name="grid_spacing">10dp</dimen>
+    <dimen name="tile_width">120dp</dimen>
+    <dimen name="tile_icon">72dp</dimen>
+    <dimen name="tile_padding">8dp</dimen>
+    <dimen name="tile_radius">10dp</dimen>
+    <dimen name="focus_stroke">3dp</dimen>
+    <dimen name="tile_label_size">14sp</dimen>
+    <dimen name="clock_size">26sp</dimen>
+    <dimen name="tab_text">19sp</dimen>
+    <dimen name="status_text">14sp</dimen>
+    <dimen name="section_size">18sp</dimen>
+    <dimen name="notice_padding">14dp</dimen>
+    <dimen name="setup_padding">28dp</dimen>
+</resources>

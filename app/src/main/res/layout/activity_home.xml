@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wallpaperImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/wallpaperScrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_wallpaper_scrim"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/screen_margin"
+            android:paddingEnd="@dimen/screen_margin">
+
+            <TextView
+                android:id="@+id/tabSearch"
+                style="@style/HomeTab"
+                android:text="@string/tab_search" />
+
+            <TextView
+                android:id="@+id/tabHome"
+                style="@style/HomeTab"
+                android:text="@string/tab_home" />
+
+            <TextView
+                android:id="@+id/tabApps"
+                style="@style/HomeTab"
+                android:text="@string/tab_apps" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/statusSource"
+                style="@style/StatusChip"
+                android:contentDescription="@string/status_source"
+                android:src="@drawable/ic_source" />
+
+            <LinearLayout
+                android:id="@+id/statusNetwork"
+                style="@style/StatusChipGroup">
+
+                <ImageView
+                    android:id="@+id/statusNetworkIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/status_network"
+                    android:src="@drawable/ic_wifi" />
+
+                <TextView
+                    android:id="@+id/statusNetworkLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:maxWidth="150dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/status_text" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/statusSettings"
+                style="@style/StatusChip"
+                android:contentDescription="@string/status_settings"
+                android:src="@drawable/ic_settings" />
+
+            <ImageView
+                android:id="@+id/statusSetup"
+                style="@style/StatusChip"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/status_setup"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.sukanth.leanlauncher.ui.ClockView
+                android:id="@+id/statusClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/clock_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/screen_margin"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/screen_margin"
+            android:background="#1FFFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/searchPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/searchInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search_input"
+                    android:hint="@string/search_hint"
+                    android:imeOptions="actionSearch|flagNoExtractUi"
+                    android:inputType="text"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textColorHint="#80FFFFFF"
+                    android:textSize="18sp"
+                    android:autofillHints="" />
+
+                <TextView
+                    android:id="@+id/searchSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="@dimen/tile_label_size"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/appGrid"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:descendantFocusability="afterDescendants"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingStart="@dimen/screen_margin"
+                android:paddingTop="4dp"
+                android:paddingEnd="@dimen/screen_margin"
+                android:paddingBottom="20dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_overlay"
+        android:padding="@dimen/notice_padding"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/tile_label_size"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/menuOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_overlay"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/menuTitle"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/section_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menuPin"
+            style="@style/MenuItem" />
+
+        <TextView
+            android:id="@+id/menuMoveLeft"
+            style="@style/MenuItem"
+            android:text="@string/menu_move_left" />
+
+        <TextView
+            android:id="@+id/menuMoveRight"
+            style="@style/MenuItem"
+            android:text="@string/menu_move_right" />
+
+        <TextView
+            android:id="@+id/menuAppInfo"
+            style="@style/MenuItem"
+            android:text="@string/menu_app_info" />
+
+        <TextView
+            android:id="@+id/menuHide"
+            style="@style/MenuItem"
+            android:text="@string/menu_hide_home" />
+
+        <TextView
+            android:id="@+id/menuDismiss"
+            style="@style/MenuItem"
+            android:text="@string/menu_dismiss" />
+
+    </LinearLayout>
+
+</FrameLayout>

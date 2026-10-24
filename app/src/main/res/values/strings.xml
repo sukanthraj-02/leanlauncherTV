@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">leanlauncherTV</string>
+
+    <string name="section_favorites">Favourites</string>
+    <string name="section_all_apps">All apps</string>
+    <string name="setup_button">Set as home app</string>
+    <string name="empty_state">No apps found. Open leanlauncherTV from the TV app list to reload.</string>
+
+    <string name="tab_search">Search</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_apps">Apps</string>
+
+    <string name="search_hint">Search apps</string>
+    <string name="search_none">No app matches that.</string>
+    <string name="search_results">%1$d matching app(s)</string>
+
+    <string name="status_source">Input source</string>
+    <string name="status_network">Network</string>
+    <string name="status_settings">System settings</string>
+    <string name="status_setup">leanlauncherTV setup</string>
+    <string name="status_wifi_off">Wi-Fi off</string>
+    <string name="status_not_connected">Not connected</string>
+    <string name="status_wifi">Wi-Fi</string>
+    <string name="status_ethernet">Ethernet</string>
+    <string name="status_online">Online</string>
+    <string name="notice_not_home">Not the home app yet. Open Setup from the gear icon.</string>
+    <string name="status_wifi_settings_title">Network</string>
+
+    <string name="notice_cannot_launch">%1$s cannot be opened.</string>
+
+    <string name="menu_pin">Pin to top</string>
+    <string name="menu_unpin">Unpin</string>
+    <string name="menu_move_left">Move left</string>
+    <string name="menu_move_right">Move right</string>
+    <string name="menu_app_info">App info</string>
+    <string name="menu_hide_home">Hide from Home</string>
+    <string name="menu_show_home">Show on Home</string>
+    <string name="menu_dismiss">Close</string>
+
+    <string name="setup_title">leanlauncherTV setup</string>
+    <string name="setup_request_home">Make leanlauncherTV the home app</string>
+    <string name="setup_continue_home">Continue to home</string>
+    <string name="setup_continue_failed">Could not open the home screen. Use Switch to leanlauncherTV below.</string>
+    <string name="setup_copy_adb">Copy ADB commands</string>
+    <string name="setup_back">Back to grid</string>
+    <string name="setup_adb_heading">Manual ADB commands (computer)</string>
+    <string name="setup_adb_label">leanlauncherTV ADB commands</string>
+    <string name="setup_use_adb">This device did not offer the change in-app. Try the one-press switch in Stock launcher switch, or use the manual steps below.</string>
+    <string name="setup_refused">The system declined, or HOME still opens another app. Try the one-press switch in Stock launcher switch, or the manual steps below.</string>
+    <string name="setup_copied">Commands copied to the clipboard.</string>
+
+    <string name="setup_stock_heading">Stock launcher switch</string>
+    <string name="setup_stock_note">One press uses this TV\'s own debugging service. No computer or cable. The first time, the TV asks you to allow debugging. If it blocks that, the copy buttons below still work.</string>
+    <string name="setup_stock_one_click_disable">Switch to leanlauncherTV</string>
+    <string name="setup_stock_one_click_restore">Restore stock launcher</string>
+    <string name="setup_stock_manual_heading">No on-TV ADB? Use a computer</string>
+    <string name="setup_stock_manual_note">These buttons copy the same commands to the clipboard. Paste them into a terminal with ADB access to this TV.</string>
+    <string name="setup_stock_disable">Copy: disable stock launcher</string>
+    <string name="setup_stock_restore">Copy: restore stock launcher</string>
+    <string name="setup_stock_disable_copied">Disable commands copied. Paste them into a terminal with ADB access to this TV.</string>
+    <string name="setup_stock_restore_copied">Restore commands copied. Paste them into a terminal with ADB access to this TV.</string>
+    <string name="setup_stock_none">No commands were available. Reopen this screen to probe the TV again.</string>
+
+    <string name="setup_adb_connecting">Connecting to this TV\'s ADB… If the TV asks, choose Allow.</string>
+    <string name="setup_adb_busy">An ADB action is already running.</string>
+    <string name="setup_adb_consent_title">Allow on-TV ADB?</string>
+    <string name="setup_adb_consent_message">leanlauncherTV will connect to this TV\'s own debugging service. This is the same access a computer with ADB has: it can disable the stock launcher and set the home app. The connection stays on this TV, and the restore button undoes the change.\n\nThe app keeps its debugging key in private storage. Continue only if you want this.</string>
+    <string name="setup_adb_consent_allow">Allow</string>
+    <string name="setup_adb_consent_cancel">Cancel</string>
+    <string name="setup_adb_consent_declined">No change was made.</string>
+    <string name="setup_adb_unreachable">Could not reach this TV\'s ADB service. Turn on Network debugging in Settings, then try again. The copy buttons still work.</string>
+    <string name="setup_adb_not_authorized">The TV did not finish allowing debugging. Accept the Allow USB debugging prompt, then try again. Tick Always allow if the TV offers it.</string>
+    <string name="setup_adb_key_failed">The app could not prepare its debugging key. Try again, or use the copy buttons.</string>
+    <string name="setup_adb_self_home_disabled">The app could not switch its own home screen back on. Use Switch to leanlauncherTV below, then try again.</string>
+    <string name="setup_adb_failed">ADB could not run the commands: %1$s</string>
+    <string name="setup_adb_unknown_error">unknown error</string>
+    <string name="setup_adb_unknown_home">unknown</string>
+    <string name="setup_adb_disabled">Done. leanlauncherTV is now the home app.</string>
+    <string name="setup_adb_disabled_with_warnings">Done. HOME now opens leanlauncherTV, but the TV rejected one command. Use the copy fallback if HOME misbehaves.</string>
+    <string name="setup_adb_home_not_changed">The commands ran, but HOME still opens %1$s. The TV may protect the home app; use the copy fallback or system settings.</string>
+    <string name="setup_adb_restored">Done. The stock launcher is enabled and HOME is back with it.</string>
+    <string name="setup_adb_restored_no_component">Stock launchers re-enabled. Now choose the stock launcher under Settings > Apps > Default apps > Home app.</string>
+    <string name="setup_adb_restore_not_verified">The stock launchers were re-enabled, but HOME still opens %1$s. Choose the stock launcher in system settings, or use the copy fallback.</string>
+
+    <string name="setup_wallpaper_heading">Wallpaper</string>
+    <string name="wallpaper_note">Optional. Photos change only while the home screen is visible. Built-in photos use Wallhaven\'s General category; its People category is excluded. Images stay in memory. Local files are read in place through Android\'s file picker.</string>
+    <string name="wallpaper_source">Source: %1$s\nPress to change</string>
+    <string name="wallpaper_source_builtin">Built-in photos</string>
+    <string name="wallpaper_source_local">Local images</string>
+    <string name="wallpaper_source_web">Website</string>
+    <string name="wallpaper_source_switched">Source: %1$s. It will load when you return to the home screen.</string>
+    <string name="wallpaper_pick_local">Choose local images</string>
+    <string name="wallpaper_url_set">Website wallpaper (paste URL)</string>
+    <string name="wallpaper_url_change">Change website URL</string>
+    <string name="wallpaper_url_title">Website wallpaper</string>
+    <string name="wallpaper_url_note">Paste a public page, feed or direct image address. The TV reads image links from it while the home screen is visible. Only use a site you trust.</string>
+    <string name="wallpaper_url_hint">https://example.com/wallpapers</string>
+    <string name="wallpaper_url_save">Save</string>
+    <string name="wallpaper_url_invalid">Enter a valid http:// or https:// address.</string>
+    <string name="wallpaper_url_saved">Website saved. Images will load when you return to the home screen.</string>
+    <string name="wallpaper_local_none">No images were selected.</string>
+    <string name="wallpaper_local_again">Some images may need choosing again after a restart.</string>
+    <string name="wallpaper_picker_missing">This TV has no file picker. Copy images to the TV and use a file manager, or use the website option.</string>
+    <string name="wallpaper_source_needs_local">Choose local images first.</string>
+    <string name="wallpaper_source_needs_url">Set a website URL first.</string>
+    <string name="wallpaper_detail_builtin">Wallhaven General category only. Its People and Anime categories are excluded.</string>
+    <string name="wallpaper_detail_local_empty">No local images selected yet.</string>
+    <string name="wallpaper_detail_web">Reading images from %1$s</string>
+    <plurals name="wallpaper_local_saved">
+        <item quantity="one">%1$d image selected. It will load when you return to the home screen.</item>
+        <item quantity="other">%1$d images selected. They will load when you return to the home screen.</item>
+    </plurals>
+    <plurals name="wallpaper_pick_local_count">
+        <item quantity="one">Choose local images (%1$d selected)</item>
+        <item quantity="other">Choose local images (%1$d selected)</item>
+    </plurals>
+    <plurals name="wallpaper_detail_local">
+        <item quantity="one">%1$d local image selected.</item>
+        <item quantity="other">%1$d local images selected.</item>
+    </plurals>
+    <string name="wallpaper_toggle_on">Wallpaper: ON\nPress to turn it off</string>
+    <string name="wallpaper_toggle_off">Wallpaper: OFF\nPress to turn it on</string>
+    <string name="wallpaper_interval">Change every %1$s</string>
+    <string name="wallpaper_next">Next wallpaper now</string>
+    <string name="wallpaper_queued">A new wallpaper will load when you return to the home screen.</string>
+    <string name="wallpaper_15m">15 minutes</string>
+    <string name="wallpaper_30m">30 minutes</string>
+    <string name="wallpaper_1h">1 hour</string>
+    <string name="wallpaper_6h">6 hours</string>
+    <string name="wallpaper_1d">1 day</string>
+
+    <string name="diag_title">Diagnostics</string>
+    <string name="diag_refresh_memory">Re-measure memory</string>
+    <string name="diag_clear_cache">Clear icon cache</string>
+    <string name="diag_cache_cleared">Icon cache cleared.</string>
+</resources>
